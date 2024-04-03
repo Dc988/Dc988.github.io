@@ -68,6 +68,10 @@
         }
     });
 
+    $('.scroll-to-bottom').click(function () {
+        $('html, body').animate({scrollTop: 610}, 1500, 'easeInOutExpo');
+        return false;
+    });
 
     // Skills
     $('.skill').waypoint(function () {
@@ -98,20 +102,12 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
+
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
 
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        items: 1
-    });
     
 })(jQuery);
 

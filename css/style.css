@@ -2403,7 +2403,7 @@ textarea.form-control {
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: var(--green);
+  color: var(--success);
 }
 
 .valid-tooltip {
@@ -2431,7 +2431,7 @@ textarea.form-control {
 
 .was-validated .form-control:valid,
 .form-control.is-valid {
-  border-color: var(--green);
+  border-color: var(--success);
   padding-right: calc(1.5em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2441,7 +2441,7 @@ textarea.form-control {
 
 .was-validated .form-control:valid:focus,
 .form-control.is-valid:focus {
-  border-color: var(--green);
+  border-color: var(--success);
   box-shadow: 0 0 0 0.2rem var(--primary-t);
 }
 
@@ -2453,20 +2453,20 @@ textarea.form-control.is-valid {
 
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
-  border-color: var(--green);
+  border-color: var(--success);
   padding-right: calc(0.75em + 2.3125rem);
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") var(--light) no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 .was-validated .custom-select:valid:focus,
 .custom-select.is-valid:focus {
-  border-color: var(--green);
+  border-color: var(--success);
   box-shadow: 0 0 0 0.2rem var(--primary-t);
 }
 
 .was-validated .form-check-input:valid~.form-check-label,
 .form-check-input.is-valid~.form-check-label {
-  color: var(--green);
+  color: var(--success);
 }
 
 .was-validated .form-check-input:valid~.valid-feedback,
@@ -2478,12 +2478,12 @@ textarea.form-control.is-valid {
 
 .was-validated .custom-control-input:valid~.custom-control-label,
 .custom-control-input.is-valid~.custom-control-label {
-  color: var(--green);
+  color: var(--success);
 }
 
 .was-validated .custom-control-input:valid~.custom-control-label::before,
 .custom-control-input.is-valid~.custom-control-label::before {
-  border-color: var(--green);
+  border-color: var(--success);
 }
 
 .was-validated .custom-control-input:valid:checked~.custom-control-label::before,
@@ -2499,17 +2499,17 @@ textarea.form-control.is-valid {
 
 .was-validated .custom-control-input:valid:focus:not(:checked)~.custom-control-label::before,
 .custom-control-input.is-valid:focus:not(:checked)~.custom-control-label::before {
-  border-color: var(--green);
+  border-color: var(--success);
 }
 
 .was-validated .custom-file-input:valid~.custom-file-label,
 .custom-file-input.is-valid~.custom-file-label {
-  border-color: var(--green);
+  border-color: var(--success);
 }
 
 .was-validated .custom-file-input:valid:focus~.custom-file-label,
 .custom-file-input.is-valid:focus~.custom-file-label {
-  border-color: var(--green);
+  border-color: var(--success);
   box-shadow: 0 0 0 0.2rem var(--primary-t);
 }
 
@@ -2826,8 +2826,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: var(--light);
-  background-color: var(--green);
-  border-color: var(--green);
+  background-color: var(--success);
+  border-color: var(--success);
 }
 
 .btn-success:hover {
@@ -2847,8 +2847,8 @@ fieldset:disabled a.btn {
 .btn-success.disabled,
 .btn-success:disabled {
   color: var(--light);
-  background-color: var(--green);
-  border-color: var(--green);
+  background-color: var(--success);
+  border-color: var(--success);
 }
 
 .btn-success:not(:disabled):not(.disabled):active,
@@ -3143,14 +3143,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-  color: var(--green);
-  border-color: var(--green);
+  color: var(--success);
+  border-color: var(--success);
 }
 
 .btn-outline-success:hover {
   color: var(--light);
-  background-color: var(--green);
-  border-color: var(--green);
+  background-color: var(--success);
+  border-color: var(--success);
 }
 
 .btn-outline-success:focus,
@@ -3160,7 +3160,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-success.disabled,
 .btn-outline-success:disabled {
-  color: var(--green);
+  color: var(--success);
   background-color: transparent;
 }
 
@@ -3168,8 +3168,8 @@ fieldset:disabled a.btn {
 .btn-outline-success:not(:disabled):not(.disabled).active,
 .show>.btn-outline-success.dropdown-toggle {
   color: var(--light);
-  background-color: var(--green);
-  border-color: var(--green);
+  background-color: var(--success);
+  border-color: var(--success);
 }
 
 .btn-outline-success:not(:disabled):not(.disabled):active:focus,
@@ -5444,7 +5444,7 @@ a.badge-secondary.focus {
 
 .badge-success {
   color: var(--light);
-  background-color: var(--green);
+  background-color: var(--success);
 }
 
 a.badge-success:hover,
@@ -7017,7 +7017,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: var(--green) !important;
+  background-color: var(--success) !important;
 }
 
 a.bg-success:hover,
@@ -7082,6 +7082,8 @@ button.bg-dark:focus {
   background-color: var(--dark) !important;
 }
 
+
+
 .bg-white {
   background-color: var(--light) !important;
 }
@@ -7139,7 +7141,7 @@ button.bg-dark:focus {
 }
 
 .border-success {
-  border-color: var(--green) !important;
+  border-color: var(--success) !important;
 }
 
 .border-info {
@@ -10736,7 +10738,7 @@ a.text-secondary:focus {
 }
 
 .text-success {
-  color: var(--green) !important;
+  color: var(--success) !important;
 }
 
 a.text-success:hover,
