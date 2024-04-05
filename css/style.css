@@ -5,7 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -6230,13 +6230,16 @@ a.close.disabled {
   height: 100%;
   overflow: hidden;
   outline: 0;
+  
 }
+
 
 .modal-dialog {
   position: relative;
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
+ 
 }
 
 .modal.fade .modal-dialog {
@@ -6308,6 +6311,7 @@ a.close.disabled {
   position: relative;
   display: flex;
   flex-direction: column;
+  
   width: 100%;
   pointer-events: auto;
   background-color: var(--light);
@@ -11151,31 +11155,14 @@ h6,
   border-radius: 60px;
 }
 
-.portfolio-item .portfolio-btn {
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-  border-radius: 4px;
-  opacity: 0;
-  transition: .5s;
-}
 
-.portfolio-item:hover .portfolio-btn {
-  opacity: 1;
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
-  top: 30px;
-  left: 30px;
-}
 
-.testimonial-carousel .owl-dots {
+.owl-carousel .owl-dots {
   margin-top: 25px;
   text-align: center;
 }
 
-.testimonial-carousel .owl-dot {
+.owl-carousel .owl-dot {
   display: inline-block;
   margin: 0 5px;
   width: 12px;
@@ -11184,7 +11171,7 @@ h6,
   background: var(--gray-light);
 }
 
-.testimonial-carousel .owl-dot.active {
+.owl-carousel .owl-dot.active {
   background: var(--primary);
 }
 
