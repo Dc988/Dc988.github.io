@@ -22,7 +22,7 @@
 }
 
 .skill-item:hover {
-    transition: background-color 2s ease;
+    transition: background-color 1s ease;
     border-radius: 15px;
     background-color: var(--gray-light);
 }
