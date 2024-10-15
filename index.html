@@ -2,232 +2,494 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Mi Portafolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Dicmar Castro Dominguez Portafolio Web" name="keywords">
-    <meta content="Portafolio Porgramador Dicmar Castro" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Dicmar Blogger</title>
+   <meta name="keywords" content="Blog personal">
+   <meta name="description" content="Blog de evidencia ingles sena">
+   <meta name="author" content="Dicmar Andres Castro Dominguez">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
+<!-- body -->
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h2 class="m-0 display-5">Mi <span class="text-primary">Porta</span>folio</h2>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Inicio</a>
-                <a href="#about" class="nav-item nav-link">Descripción</a>
-                <a href="#skill" class="nav-item nav-link">Habilidades</a>
-                <a href="#portfolio" class="nav-item nav-link">Proyectos</a>
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-3 logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
-                </div>
-                <div class="col-lg-8 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">Soy</h3>
-                    <h2 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
-                        Dicmar Castro D. </h2>
-                    <h2 class="typed-text-output d-inline font-weight-lighter text-white"></h2>
-                    <div class="typed-text d-none">Programador Back-End</div>
-                    <!--
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
-                    </div>
-                    -->
-                </div>
+            <div class="col-lg-9">
+               <div class="menu-area">
+                  <div class="limit-box">
+                     <nav class="main-menu">
+                        <ul class="menu-area-main">
+                           <li class="active"> <a href="index.html">Home</a> </li>
+                           <li> <a href="#evidences_section">Evidences</a> </li>
+                           <li> <a href="#blog">Blog</a> </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+      <!-- end header inner -->
+   </header>
+   <!-- end header -->
 
-    <!-- About Start -->
-    <div class="container-fluid py-5 about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h2 class="display-1 text-uppercase text-white titulo-2">Descripción
-                </h2>
-                <h2 class="position-absolute text-uppercase text-primary titulo-section">Sobre Mí</h2>
+
+   <!-- section blog articulos-->
+   <div class="section layout_padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="heading">
+                  <h3>ABOUT THIS <span class="orange_color">BLOG</span></h3>
+               </div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">¡Hola! Soy Dicmar, un apasionado desarrollador de Software.</h3>
-                    <p>Me considero una persona con capacidad e interés por aplicar y desarrollar actividades que
-                        contribuyan a la planeación y ejecución de los objetivos trazados; Orientado a resultados y
-                        habilidades metódicas para
-                        solución de problemas, con capacidad de toma de decisión, capacidad de planificación y
-                        organización en el manejo de estrés, pensamiento crítico y analítico, orientación a familias,
-                        usuarios y comunidad, manejo de la prudencia y escucha empática, manejo de comunicación
-                        asertiva, con capacidad de aprendizaje, tolerante, y amatividad al cambio.
-                        Mi enfoque se centra en la creación de soluciones tecnológicas para empresas, restaurantes,
-                        comercios y cualquier entidad que requiera la captura, procesamiento y entrega eficiente de
-                        información.</p>
-                </div>
+         </div>
+         <!-- blog articulo 1-->
+         <div class="row">
+            <div class="col-md-6">
+               <img src="images/blog1.png" alt="#" />
             </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-    <!-- Skill Start -->
-
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h2 class="display-1 text-uppercase text-white titulo-2">Skills</h2>
-                <h2 class="position-absolute text-uppercase text-primary titulo-section">Tecnologías</h2>
+            <div class="col-md-6">
+               <div class="full blog_cont">
+                  <h3>EVIDENCE OF PERFORMANCE</h3>
+                  <h4>GA4-240202501-AA1-EV03</h4>
+                  <p>Hi!, my name is Dicmar Castro Dominguez and I am a student of Analysis and Development of Software
+                     with ID 2898288.</p>
+                  <p>
+                     Welcome to my blog, where I showcase the progress I’ve made in mastering English as a second
+                     language through videos, audios, and written texts. Here, you’ll find reflections on topics like
+                     family, hobbies, work, travel, and current events. Each entry highlights how these experiences have
+                     shaped my language skills and personal growth. This platform is a creative space where I combine
+                     learning with real-life scenarios, illustrating how language opens doors to deeper understanding
+                     and communication.</p>
+               </div>
             </div>
+         </div>
+         <!-- end blog articulo 1-->
+      </div>
+   </div>
+   <!-- end section blog articulos-->
 
-            <div class="skill-content" id="skill_content">
+   <!-- slider evidencias -->
+   <div class="section" id="evidences_section">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="heading">
+               <h3>ENGLISH <span class="orange_color">EVIDENCES</span></h3>
+            </div>
+         </div>
+      </div>
 
-                <!--
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Javascript</h6>
-                            <h6 class="font-weight-bold">80%</h6>
+      <div class="banner-slider">
+         <div class="container-fluid">
+            <div id="slider_main" class="carousel slide slider" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="margin_top_30 carousel-item active">
+                     <div class="row">
+                        <div class="col-md-7 frame">
+
+                           <iframe title="Audio GA3-240202501-AA1-EV02" allowtransparency="true" height="150"
+                              width="100%" style="border: none; min-width: min(100%, 430px);height:150px;"
+                              scrolling="no" data-name="pb-iframe-player"
+                              src="https://www.podbean.com/player-v2/?from=embed&i=3bpri-169fe4e-pb&share=1&download=1&fonts=Arial&skin=f6f6f6&font-color=&rtl=0&logo_link=&btn-skin=7&size=150"
+                              loading="lazy"></iframe>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                aria-valuemax="100"></div>
+                        <div class="col-md-5">
+                           <div class="full slider_cont_section">
+                              <h4>GA3-240202501-AA1-EV02</h4>
+                              <h3 class="subtitle">AUDIO</h3>
+                              <p>in this activity, I had to record an audio where I identify my ttitudes, beliefs and
+                                 obligations in the work and academic context.</p>
+
+                           </div>
                         </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Python</h6>
-                            <h6 class="font-weight-bold">85%</h6>
+                     </div>
+                  </div>
+                  <div class="margin_top_30 carousel-item">
+                     <div class="row">
+                        <div class="col-md-7 frame">
+                           <iframe title="GA3-240202501-AA2-EV02 Audio" allowtransparency="true" height="150"
+                              width="100%" style="border: none; min-width: min(100%, 430px);height:150px;"
+                              scrolling="no" data-name="pb-iframe-player"
+                              src="https://www.podbean.com/player-v2/?from=embed&i=9mapv-169ff7d-pb&share=1&download=1&fonts=Arial&skin=1&font-color=&rtl=0&logo_link=&btn-skin=7&size=150"
+                              loading="lazy"></iframe>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                aria-valuemax="100"></div>
+                        <div class="col-md-5">
+                           <div class="full slider_cont_section">
+                              <h4>GA3-240202501-AA2-EV02</h4>
+                              <h3 class="subtitle">AUDIO</h3>
+                              <p>I recorded an audio where I had to mention a short opinion about the career, plans,
+                                 actions and solutions of my academic and work context.</p>
+                           </div>
                         </div>
-                    </div>
-
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Excel VBA</h6>
-                            <h6 class="font-weight-bold">95%</h6>
+                     </div>
+                  </div>
+                  <div class="margin_top_30 carousel-item">
+                     <div class="row">
+                        <div class="col-md-7 frame">
+                           <iframe width="560" height="315"
+                              src="https://www.youtube.com/embed/6nRmuIQe2_0?si=s65AIWgj7qcjbnYm"
+                              title="YouTube video player" frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                aria-valuemax="100"></div>
+                        <div class="col-md-5">
+                           <div class="full slider_cont_section">
+                              <h4>GA2-240202501-AA1-EV02</h4>
+                              <h3 class="subtitle">VIRTUAL INTERVIEW</h3>
+                              <p>With the support of a partner, I create a video in which I simulate a job interview
+                                 presentation, applying for a job related to my professional profile.</p>
+                           </div>
                         </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-    </div>
-    <!-- Skill End -->
+                     </div>
+                  </div>
 
-    <!-- Portfolio Start -->
+               </div>
 
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h2 class="display-1 text-uppercase text-white titulo-2">Galeria</h2>
-                <h2 class="position-absolute text-uppercase text-primary titulo-section">Proyectos</h2>
+               <a class="carousel-control-prev" href="#slider_main" data-slide="prev">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+               </a>
+               <a class="carousel-control-next" href="#slider_main" data-slide="next">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+               </a>
             </div>
 
-            <div class="row">
-                <div class="col-12 text-center mb-2">                   
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".excel">Excel VBA</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".php">PHP</li>
-                    </ul>
-                </div>
+         </div>
+      </div>
+   </div>
+   <!-- end slider evidencias -->
+
+   <!-- section -->
+   <div class="section layout_padding margin_top_30">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="heading">
+                  <h4>OTHER EVIDENCES</h4>
+               </div>
             </div>
-            <div id="portfolio_container">     
+         </div>
+         <div class="row blog_cont division">
+            <div class="full">
+               <h3>EVIDENCE GA2-240202501-AA1-EV03</h3>
+               <h4>Chronicle: Fei-Fei Li, a pioneer in artificial intelligence</h4>
+               <h5 class="grey_font">October 12 2024</h5>
+               <div class="col-md-6 img-float-left">
+                  <img src="images/fei-fei.png" alt="fei-fei, A PIONEER IN ARTIFICIAL INTELLIGENCE" />
+                  <h5 class="img-text">Dr. Fei Fei Li’s new book is The Worlds I See: Curiosity, Exploration, and
+                     Discovery at the Dawn of AI.</h5>
 
+               </div>
+               <p>
+                  Fei-Fei Li, a figure in the realm of Artificial Intelligence (AI), born in Beijing, China, she
+                  developed a deep interest in AI early in life and pursued it passionately.
+                  Her career took off at Stanford University, where she earned her Ph.D. and later joined as a
+                  faculty member. It was here that she spearheaded revolutionary research in computer vision,
+                  particularly focusing on image recognition and understanding. Her seminal work in developing
+                  ImageNet, a vast database crucial for training
+                  AI systems, became a cornerstone in the development of deep learning algorithms. Beyond academia,
+                  Fei-Fei Li played a pivotal role in shaping AI policy and ethics. Recognizing the transformative
+                  potential of AI, she advocated for responsible AI development, emphasizing the importance of
+                  diversity and inclusion in technology. Her efforts led to the establishment of the Stanford
+                  Human-Centered AI Institute, where interdisciplinary collaboration thrives under her guidance.
+                  As her influence expanded globally, Li co-founded AI4ALL, a nonprofit organization dedicated to
+                  increasing diversity and inclusion in AI education. Her commitment to democratizing AI education
+                  has empowered countless young minds, especially women and underrepresented minorities, to pursue
+                  careers in technology. Fei-Fei Li's
+                  accolades are numerous, including being elected to the National Academy of Engineering and
+                  receiving prestigious awards such as the Blavatnik National Award for Young Scientists. Her TED
+                  talks and public appearances continue to inspire a new generation of AI enthusiasts worldwide.
+                  Today, Fei-Fei Li's legacy endures not only through her technical contributions but also through
+                  her advocacy for ethical AI practices and her dedication to ultivating a more inclusive AI
+                  community. Her journey exemplifies a relentless pursuit of knowledge and a steadfast commitment to
+                  harnessing technology for the betterment of humanity.
+               </p>
             </div>
-        </div>
-    </div>
-    <!-- Portfolio End -->
+         </div>
 
+         <div class="row blog_cont division margin_top_30">
+            <div class="full row">
+               <div class="col-md-12">
+                  <h3> EVIDENCE GA2-240202501-AA2-EV03</h3>
+                  <h4>Written document</h4>
+                  <h5 class="grey_font">October 12 2024</h5>
+               </div>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-
-                <a class="btn btn-light btn-social mr-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://github.com/Dc988"><i
-                        class="fab fa-github"></i></a>
-
+               <div class="email-container col-md-6">
+                  <div class="subject">Subject: Application for Software Engineer Position</div>
+                  <div class="email-content">
+                     <p>Dear Hiring Manager,</p>
+                     <p>I hope this message finds you well. I am writing to express my interest in the Software Engineer
+                        position currently available at your esteemed company.</p>
+                     <p>I am studying a technologist at SENA, where I am gaining a solid foundation in software
+                        development, algorithms, and database management. As someone passionate about leveraging
+                        technology to solve complex problems, I am particularly excited about the opportunity to
+                        contribute to your innovative projects.</p>
+                     <p>My academic coursework and internships have equipped me with proficiency in Python, PHP, and
+                        SQL. I am confident in my ability to design scalable and efficient solutions that align with
+                        your company's objectives.</p>
+                     <p>In addition to technical skills, I bring strong problem-solving abilities, teamwork, and
+                        effective communication skills to the table.</p>
+                     <p>Please find attached my resume for your review. I would welcome the opportunity to discuss how
+                        my skills and experiences align with the requirements of the Software Engineer position at your
+                        company. Thank you for considering my application. I look forward to hearing from you soon.</p>
+                  </div>
+                  <div class="email-signature">
+                     <p>Best regards,</p>
+                     <p>Dicmar Castro Dominguez</p>
+                     <p>Phone Number: 57 30033223/p>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <img src="images/written_documente_eve_img.png" alt="EVIDENCE GA2-240202501-AA2-EV03" />
+               </div>
             </div>
-            <!--
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="">Help</a>
-            </div>-->
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="">Dc988</a>. All Rights Reserved.
-                Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
-            </p>
-        </div>
-    </div>
-    <!-- Footer End -->
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+         </div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+         <div class="row blog_cont division margin_top_30">
+            <div class="full">
+               <h3>EVIDENCE GA4-240202501-AA1-EV02</h3>
+               <h4>Mind Map about your Personal Learning PLE Environment</h4>
+               <h5 class="grey_font">October 12 2024</h5>
+               <div class="col-md-12">
+                  <img src="images/ple.jpg" alt="Personal Learning Environment" />
+               </div>
+            </div>
+         </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+         <div class="row blog_cont division margin_top_30">
+            <div class="full">
+               <h3>EVIDENCE GA1-240202501-AA1-EV03</h3>
+               <h4>Brochure</h4>
+               <h5 class="grey_font">October 12 2024</h5>
+               <div class="col-md-12">
+                  <div class="col-md-12">
+                     <div id="slider" class="carousel slide slider" data-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="margin_top_30 carousel-item active">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <img src="images/GA1-240202501-AA1-EV03_page-0001.jpg"
+                                       alt="Evidencia GA1-240202501-AA1-EV03" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="margin_top_30 carousel-item">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <img src="images/GA1-240202501-AA1-EV03_page-0002.jpg"
+                                       alt="Evidencia GA1-240202501-AA1-EV03" />
+                                 </div>
+                              </div>
+                           </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/principal.js"></script>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#slider" data-slide="prev">
+                           <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <a class="carousel-control-next" href="#slider" data-slide="next">
+                           <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- end section -->
+
+   <div class="img-layer">
+   </div>
+
+   <!-- section -->
+   <div class="section layout_padding" id="blog">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="heading">
+                  <h3>POSTS </h3>
+               </div>
+            </div>
+         </div>
+         <div class="row blog_cont division">
+            <div class="full">
+               <h3>Crime and Punishment</h3>
+               <h5 class="grey_font">October 13 2024</h5>
+               <div class="col-md-6 img-float-left">
+                  <img src="images/Crime and Punishment.jpg" alt="Crime and Punishment" />
+                  <h5 class="img-text">Crime and Punishment by Fyodor Dostoevsky eBook por Joseph Cowley</h5>
+               </div>
+               <p>
+                  Crime and punishment is a complex and multifaceted issue that has been the subject of much debate
+                  throughout history. At its core, it involves the commission of a criminal act and the imposition of
+                  punishment by the state in response. Crime and punishment systems vary widely from country to
+                  country, but all have the goal of maintaining social order and protecting citizens from harm.
+                  One of the key issues in crime and punishment is determining the appropriate punishment for a given
+                  crime. Some argue for a system of punishment that is focused on rehabilitation, in which the
+                  offender is given the opportunity to learn new skills and receive treatment for underlying problems
+                  that may have contributed to their criminal behavior. Others argue for a system of punishment that
+                  is focused on retribution, in which the offender is punished in proportion to the severity of their
+                  crime as a way to deter others from committing similar crimes. Still, others argue that a system of
+                  punishment should be focused on incapacitation, where the offender is removed from society so they
+                  are unable to commit further crimes.
+                  One of the most important aspect of crime and punishment is the process of how the criminal is
+                  judged and punished. Fair Trial, Due process and access to legal representation are critical
+                  components of the justice system. It allows the accused to defend themselves, prevent arbitrary or
+                  discriminatory decisions and to ensure that the punishment fits the crime. Additionally, the use of
+                  evidence-based methods to ensure the right people are being held accountable for their crime, in
+                  order to improve the effectiveness of the punishment and reduce recidivism.
+                  Furthermore, in recent years, the issue of mass incarceration has come to the forefront as a major
+                  problem. Many argue that the current system of punishment is overly punitive and that the high rate
+                  of incarceration in the United States and other countries is not only costly but also
+                  disproportionately affects marginalized communities. This has led to calls for criminal justice
+                  reform, with a focus on reducing the number of people incarcerated, and providing alternatives to
+                  traditional forms of punishment, such as community supervision, treatment, and diversion programs.
+               </p>
+            </div>
+         </div>
+         <div class="row blog_cont division margin_top_30">
+            <div class="full">
+               <h3>Critical Thinking and Media Literacy</h3>
+               <h5 class="grey_font">October 13 2024</h5>
+               <div class="col-md-6 img-float-right">
+                  <img src="images/Critical Thinking and Media Literacy.png"
+                     alt="Critical Thinking and Media Literacy" />
+
+               </div>
+               <p>When we talk about media and information literacy we must mention that it seems to be necessary in
+                  the formation of a citizenry capable of using information critically. The growing phenomena of
+                  misinformation, as well as the effects of the media and especially social media on certain groups,
+                  forces us to analyze how this type of education helps to create critical thinking.
+                  Within the information and communication society, the development of information competence among
+                  students is essential,
+                  because it allows them to analyze and manage the information they receive from different sources.
+                  This, together with the appearance of phenomena such as fake news and the development of
+                  information and communication technologies (ICT), means that we have chosen this topic of study.
+                  The research questions we have asked ourselves are the following: how information competence is
+                  currently developing, what effects does a low development of this competence have and how does
+                  critical thinking influence its development. To answer these questions, we have used the systematic
+                  review as a methodology, analyzing a total of 17 articles extracted from the Web Of Science, SCOPUS
+                  and Google Scholar databases. The conclusions reached establish that information competence is not
+                  being developed adequately, due to aspects such as the lack of teacher training or the lack of
+                  invested resources. This causes a change in methodology to be carried out. Furthermore, a low
+                  development of this causes a series of negative effects, such as misinformation. It concludes by
+                  establishing that critical thinking is one of the main elements that make up informational
+                  competence, being necessary to achieve a correct development of this competence and a good
+                  construction of knowledge among students.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end section -->
+
+   <!-- footer -->
+   <footer>
+      <div class="container ">
+         <div class="row">
+            <div class="col-lg-4 col-md-6">
+               <a href="#"><img src="images/footer_logo.png" alt="#" /></a>
+            </div>
+            <div class="col-lg-2 col-md-6">
+               <div class="footer_links">
+                  <h3>Quick link</h3>
+                  <ul>
+                     <li> <a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a> </li>
+                     <li> <a href="#evidences_section"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                           Evidences</a> </li>
+                     <li> <a href="#blog"><i class="fa fa-angle-right" aria-hidden="true"></i> Blog</a> </li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+               <div class="footer_links">
+                  <h3>Contact us</h3>
+                  <form action="index.html">
+                     <fieldset>
+                        <div class="field">
+                           <input type="text" name="name" placeholder="Your Name" required="" />
+                        </div>
+                        <div class="field">
+                           <input type="email" name="email" placeholder="Email" required="" />
+                        </div>
+                        <div class="field">
+                           <input type="text" name="subject" placeholder="Subject" required="" />
+                        </div>
+                        <div class="field">
+                           <textarea placeholder="Message"></textarea>
+                        </div>
+                        <div class="field">
+                           <div class="center">
+                              <button class="reply_bt">Send</button>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </form>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </footer>
+   <div class="cpy">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <p>Copyright © 2019 Design by <a href="https://html.design/">Free Html Templates and Dicmar Castro</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- Scrollbar Js Files -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
 </body>
 
 </html>
