@@ -1,120 +1,170 @@
-(function ($) {
-    "use strict";
+// ADD CONTCT INFO
+function addContactInfo(name,url, icon, otherClass){
+    header_contact.innerHTML += `<a aria-label="${name}" href="${url}" target="_blank" class="ml-3 btn ${otherClass}"><i class="${icon}"></i></a>`;
+    footer_contact.innerHTML += `<a href="${url}" aria-label="${name}" target="_blank"><i class="${icon}" ></i></a>`
+}
+// ADD SKILL
 
-    // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
-    });
+function addSkill(title, image,prom) {
+    skill_content.innerHTML +=
+        `<div class="item">
+        <div class="icon">
+            <i class="fa-brands ${image} fa-xl"></i>
+        </div>
+        <div class="skill-info">
+            <h6 class="skill-name">${title}</h6>
+            <h6 class="skill-per">${prom}</h6>
+        </div>
+    </div>`;
 
+}
 
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo');
-            
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
-            }
-        }
-    });
+// PROYECT
+class Portafolio {
 
-
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
+    constructor() {
+        this.title = "";
+        this.descripcion = "";
+        this.filter = "";
+        this.id = "";
+        this.tec = Array();
+        this.carrusel = Array();
     }
 
+    clear(){
+        this.title = "";
+        this.descripcion = "";
+        this.filter = "";
+        this.id = "";
+        this.tec = Array();
+        this.carrusel = Array();
+    }
 
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        
+    setId(id) {
+        this.id = id;
+        return this;
+    }
+    setTitle(title) {
+        this.title = title;
+        return this;
+    }
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
+    setDescripcion(desc) {
+        this.descripcion = desc;
+        return this;
+    }
 
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
-    });
+    setFilter(filter) {
+        this.filter = filter;
+        return this;
+    }
+
+    addTec(tec) {
+        this.tec.push(tec);
+        return this;
+    }
+
+    addCarrusel(c) {
+        this.carrusel.push(c);
+        return this;
+    }
+
+    push() {
+
+        var tec = this.tec.map((e) => `<h5><span class="m-1 px-3 badge rounded-pill text-bg-secondary">${e}</span></h5>`).join(" ");
+
+        var btn_indicators = this.carrusel.map((e, i) => `<button class="active" type="button" data-bs-target="#${this.id}" data-bs-slide-to="${i}" aria-label="Slide ${i + 1}"></button>`).join(" ");
+        var carousel_img = this.carrusel.map((e, i) =>
+            `<div class="carousel-item ${i==0?"active":""}">
+                <!--<a href="${e}" data-lightbox="${this.id}" >-->
+                    <img src="${e}" class="d-block w-100"
+                        alt="item-${i}.png">
+            <!-- </a>-->
+            </div>`).join(" ");
+
+        portfolio_container.innerHTML +=
+            `<div class="row portfolio-item m-2">
+                
+                <h2 class="text-center font-weight-bold portafolio-title my-3">${this.title}</h2>
+                <div id="${this.id}" class="carousel slide col-md-7" data-bs-theme="dark">
+                    <div class="carousel-indicators">
+                        ${btn_indicators}
+                    </div>
+                    <div class="carousel-inner">
+                        ${carousel_img}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#${this.id}"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#${this.id}"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-md-5 ">
+                    <div class="description">
+                        <h3 class="modal-title fs-5">Descripción:</h3>
+                        <p class="text-desc">${this.descripcion}</p>
+                    </div>
+                    <div class="tecno">
+                        <h3 class="modal-title fs-5">Tecnologías Utilizadas:</h3>
+                        <div class="d-flex justify-content-start">
+                            ${tec}
+                        </div>
+                    </div>
+
+                    <!-- <div class="modulos">
+                        <h2 class="modal-title fs-5" >Módulos y Funcionalidades:</h2>
+                        <ul class="mb-4">
+                            <li class="m-1" ></li>
+                        </ul>
+                    </div>-->
+                </div>
+
+            
+        </div>`
+
+    }
+}
 
 
-    // Scroll to Bottom
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-to-bottom').fadeOut('slow');
-        } else {
-            $('.scroll-to-bottom').fadeIn('slow');
-        }
-    });
+// CONTACT INFO
+// GITHUB
+addContactInfo("Github","https://github.com/Dc988","fa-brands fa-github","btn-danger")
+// LINKIN
+addContactInfo("Linkedin","https://www.linkedin.com/in/dicmar-andres-castro-dominguez-5a991930b","fa-brands fa-linkedin-in","btn-primary")
+// WHATSAPP
+addContactInfo("Whatsapp","https://wa.me/573043821671","fa-brands fa-whatsapp","btn-success")
 
-    $('.scroll-to-bottom').click(function () {
-        $('html, body').animate({scrollTop: 610}, 1500, 'easeInOutExpo');
-        return false;
-    });
+//HABILIDADES
+addSkill("HTML", "fa-html5","intermedio");
+addSkill("CSS", "fa-css3-alt","intermedio");
+addSkill("JAVASCRIPT", "fa-js","intermedio");
+addSkill("BOOTSTRAP", "fa-bootstrap","intermedio");
+addSkill("PHP", "fa-php","intermedio");
+addSkill("PYTHON", "fa-python","intermedio");
+addSkill("EXCEL VBA", "fa fa-file-xlsx","intermedio");
 
-    // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, {offset: '80%'});
+//PORTAFOLIO
+var portfolio = new Portafolio();
 
+//1. GESTOR PACIENTES EME COLOMBIA VBA
+portfolio.setTitle("GESTOR PACIENTES EME COLOMBIA VBA")
+    .setId("carousel_proyect_eme_excel")
+    .setFilter("excel")
+    .setDescripcion("Es un aplicativo de Excel, formulario de captura de información para siniestros SOAT, en base a la información solicitada por siras, creación de una base de datos para control y seguimiento de auditoría, facturación, pagos y glosas")
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    .addTec("EXCEL")
+    .addTec("MACROS")
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
-    $(".owl-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        items: 1
-    });
-    
-})(jQuery);
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-2.jpg")
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-1.jpg")
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-3.jpg")
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-4.jpg")
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-5.jpg")
+    .addCarrusel("img/carouserl_proyectos/eme_excel/item-6.jpg")
+    .push();
 
