@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi portafolio</title>
-    <!-- icon -->
-     <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
     <!-- css principal -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- css componentes -->
+    <link rel="stylesheet" href="modules/minibar/minibar.virtual.css">
+    <!-- animaciones -->
+    <link rel="stylesheet" href="modules/animate/animate.css">
+    <!-- niceselect -->
+    <link rel="stylesheet" href="modules/nice-select/css/nice-select.css">
+
+    <!-- ico -->
+     <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
     <!-- bootstrao -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -26,30 +33,51 @@
                 <h5 class="user-profesion">Backend Developer</h5>
                 <h6 class="">Email: dicmarcastro988@gmail.com</h6>
                 <div class="data-contact mt-3" id="header_contact">
-                    <a href="https://flowcv.com/resume/8ws6phs4sm" target="_blank" class="btn btn-dark">Mi CV <i class="fa-solid fa-download"></i></a>                    
+                    <a href="https://flowcv.com/resume/8ws6phs4sm" target="_blank" class="btn btn-dark">Mi CV <i
+                            class="fa-solid fa-download"></i></a>
                 </div>
 
             </div>
         </section>
-  
+
         <section class="proyectos section">
             <h2 class="title">PROYECTOS</h2>
-            <div id="portfolio_container">     
+            <div class="filterable-button py-3" id="btn_filter" data-toggle="selected">
+                <button class="btn btn-primary selected" data-filter="*">all</button>
+                
+            </div>
+            <div id="portfolio_container">
 
             </div>
+            
+            <!-- <div class="gridder my-3">
+                <div class="grid-item apps">
+                    <div class="img-place" >
+                        <img src="img/backgruound img.jpeg" alt="">
+                        <div class="img-caption">
+                            <h5 class="fg-theme">Mobile Travel App</h5>
+                            <div class="img-tec">
+                                <i class="fa-brands fa-html5 fa-xl color-1"></i>
+                                <i class="fa-brands fa-css fa-xl color-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </section>
 
         <!-- SKILLS -->
         <section>
             <h2 class="title">HABILIDADES</h2>
             <div class="skills" id="skill_content">
+
             </div>
+            
         </section>
     </div>
     <footer>
-        
         <div class="footer-wrapper row">
-            
+
             <div class="footer-section col-md-5">
                 <h3>Enlaces Rápidos</h3>
                 <ul class="footer-links">
@@ -58,21 +86,23 @@
                     <li><a href="">Habilidades</a></li>
                 </ul>
             </div>
-                       
+
             <div class="footer-section col-md-6">
                 <h3>Contacto</h3>
                 <p>dicmarcastro988@gmail.com</p>
                 <div class="social-links" id="footer_contact">
-                    
+
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
         </div>
-        
+
     </footer>
+    <!-- jquery -->
+    <script src="modules/jquery/jquery-3.5.1.min.js"></script>
     <!-- js principal -->
     <script src="js/main.js"></script>
     <!-- font awesome js -->
@@ -81,6 +111,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+
+    <!-- isope filter portfolio -->
+    <script src="modules/isotope/isotope.pkgd.min.js"></script>
+    <!-- niceselect -->
+    <script src="modules/nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- owl carrusel -->
+     <script src="modules/owl-carousel/owl.carousel.min.js"></script>
+    <!-- wow -->
+    <script src="modules/wow/wow.min.js"></script>
+    <!-- mini bar -->
+    <script src="modules/minibar/minibar-virtual.js"></script>
+
 
 </body>
 

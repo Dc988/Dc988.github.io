@@ -1,0 +1,41 @@
+
+:root {
+    --primary-color: #1e3557;
+    --secundary-color: #4d7c8a;
+    --default-color: #7f9c96;
+    background-color: #ddda;
+    --text-color: #f8f9fa;
+    --bg-color: #212529;
+
+    /* TECNOLOGIAS */
+    --color-1: rgb(255,75,0);
+    --color-2: rgb(33,150,243);
+    --color-3: rgb(250,223,0);
+    --color-4: rgb(137,18,252);
+    --color-5:rgb(119,123,179);
+    --color-6:rgb(50,107,155);
+    /* --color-7:rgb(); */
+}
+
+
+.color-1{
+    color: var(--color-1);
+}
+
+.color-2{
+    color: var(--color-2);
+}
+
+.color-3{
+    color: var(--color-3);
+}
+
+.color-4{
+    color: var(--color-4);
+}
+.color-5{
+    color: var(--color-5);
+}
+.color-6{
+    color: var(--color-6);
+}

@@ -4,7 +4,6 @@ function addContactInfo(name,url, icon, otherClass){
     footer_contact.innerHTML += `<a href="${url}" aria-label="${name}" target="_blank"><i class="${icon}" ></i></a>`
 }
 // ADD SKILL
-
 function addSkill(title, image,prom) {
     skill_content.innerHTML +=
         `<div class="item">
@@ -26,9 +25,11 @@ class Portafolio {
         this.title = "";
         this.descripcion = "";
         this.filter = "";
+        this.filterItems= new Set();
         this.id = "";
         this.tec = Array();
         this.carrusel = Array();
+
     }
 
     clear(){
@@ -56,7 +57,14 @@ class Portafolio {
 
     setFilter(filter) {
         this.filter = filter;
+        this.filterItems.add(filter);
         return this;
+    }
+
+    setBtnFilter(){
+        this.filterItems.forEach( item=>{
+            btn_filter.innerHTML+= `<button class="btn btn-primary" data-filter=".${item}">${item}</button>`;
+        });
     }
 
     addTec(tec) {
@@ -167,4 +175,7 @@ portfolio.setTitle("GESTOR PACIENTES EME COLOMBIA VBA")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-5.jpg")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-6.jpg")
     .push();
+
+// agregar btns de filtrado
+portfolio.setBtnFilter();
 
