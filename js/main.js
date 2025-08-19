@@ -167,3 +167,4 @@ portfolio.setTitle("GESTOR PACIENTES")
     
 // agregar btns de filtrado
 portfolio.setBtnFilter();
+new WOW().init();
