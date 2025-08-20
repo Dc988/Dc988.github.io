@@ -35,6 +35,7 @@ class Portafolio {
         this.linkCode = ""
         this.tec = Array();
         this.carrusel = Array();
+        this.captions=Array();
 
     }
 
@@ -47,6 +48,7 @@ class Portafolio {
         this.linkCode = ""
         this.tec = Array();
         this.carrusel = Array();
+        this.captions=Array();
     }
 
     setLinkCode(link){
@@ -87,15 +89,16 @@ class Portafolio {
         return this;
     }
 
-    addCarrusel(c) {
-        this.carrusel.push(c);
+    addCarrusel(route,caption) {
+        this.carrusel.push(route);
+        this.captions.push(caption)
         return this;
     }
 
     push() {
 
         var carousel_img = this.carrusel.map((e, i) =>
-            `<a data-fancybox="gallery_${this.filter}" href="${e}">
+            `<a data-fancybox="gallery_${this.filter}" href="${e}" data-caption="${this.captions[i]}">
                     <img src="${e}" alt="${this.title}_${i}"/>
                 </a>`).join(" ");
 
@@ -103,7 +106,7 @@ class Portafolio {
         var btnCode = this.linkCode=="" ? "" : `<a class='btn btn-primary btn-sm' target='_blank' href='${this.linkCode}'><i class='fa fa-code'></i> ver codigo</a>`;
         
         var data_caption = `
-        <div class='col-md-5 m-auto'>
+        <div class='col-md-11 m-auto'>
             <div class='description'>
                 <p class='text-desc'>${this.descripcion}</p>
             </div>
@@ -161,22 +164,22 @@ addSkill("EXCEL VBA", "fa-solid fa-file-excel","intermedio");
 var portfolio = new Portafolio();
 
 //1. GESTOR PACIENTES EME COLOMBIA VBA
-portfolio.setTitle("GESTOR PACIENTES")
-    .setId("carousel_proyect_eme_excel")
-    .setFilter("VBA_EXCEL")
-    .setDescripcion("Es un aplicativo de Excel, formulario de captura de información para siniestros SOAT, en base a la información solicitada por siras, creación de una base de datos para control y seguimiento de auditoría, facturación, pagos y glosas")
+// portfolio.setTitle("GESTOR PACIENTES")
+//     .setId("carousel_proyect_eme_excel")
+//     .setFilter("VBA_EXCEL")
+//     .setDescripcion("Es un aplicativo de Excel, formulario de captura de información para siniestros SOAT, en base a la información solicitada por siras, creación de una base de datos para control y seguimiento de auditoría, facturación, pagos y glosas")
 
-    .addTec("EXCEL","fa-solid fa-file-excel color-7")
+//     .addTec("EXCEL","fa-solid fa-file-excel color-7")
 
-    // .setLinkCode("https://github.com/Dc988")
+//     // .setLinkCode("https://github.com/Dc988")
     
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-2.jpg")
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-1.jpg")
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-3.jpg")
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-4.jpg")
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-5.jpg")
-    .addCarrusel("img/carouserl_proyectos/eme_excel/item-6.jpg")
-    .push();
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-2.jpg")
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-1.jpg")
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-3.jpg")
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-4.jpg")
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-5.jpg")
+//     .addCarrusel("img/carouserl_proyectos/eme_excel/item-6.jpg")
+//     .push();
 
 //2. GESTOR NOTAS DE SENA
 portfolio.setTitle("GESTOR DE NOTAS SENA")
@@ -186,13 +189,13 @@ portfolio.setTitle("GESTOR DE NOTAS SENA")
 
     .addTec("PYTHON","fa-brands fa-python color-6")
 
-    .setLinkCode("https://github.com/Dc988")
+    .setLinkCode("https://github.com/Dc988/Gestion_Notas.git")
     
-    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-4.jpg")
-    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-1.jpg")
-    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-2.jpg")
-    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-3.jpg")
-    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-5.jpg")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-1.jpg","Interfaz Principal")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-2.jpg","Panel de Configuraciones")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-3.jpg","Interfaz para seleccionar columnas visibles en el table")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-4.jpg","Formulario de gestión de notas")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-5.jpg","Interfaz de filtrado")
     .push();
     
 // agregar btns de filtrado
