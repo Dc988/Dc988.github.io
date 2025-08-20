@@ -85,10 +85,10 @@ body{
 .description-about-me{
     font-size: 1.2rem;
     font-weight: 500;
-    display: flex;
-    justify-content: center;
+     display: flex;
+    justify-content: center; 
+
     align-items:center ;
-    
     & img{
         max-width: 400px;
     }
@@ -339,8 +339,8 @@ footer {
     z-index: 11;
 }
 
-.grid-item .img-caption .img-tec {
-    font-size: 14px;
+.grid-item .img-caption  {
+    font-size: 18px;
     margin-bottom: 0;
 }
 

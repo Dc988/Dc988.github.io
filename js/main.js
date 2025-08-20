@@ -32,6 +32,7 @@ class Portafolio {
         this.filter = "";
         this.filterItems= new Set();
         this.id = "";
+        this.linkCode = ""
         this.tec = Array();
         this.carrusel = Array();
 
@@ -41,9 +42,17 @@ class Portafolio {
         this.title = "";
         this.descripcion = "";
         this.filter = "";
+        this.filterItems= new Set();
         this.id = "";
+        this.linkCode = ""
         this.tec = Array();
         this.carrusel = Array();
+    }
+
+    setLinkCode(link){
+        this.linkCode = link
+        return this;
+
     }
 
     setId(id) {
@@ -91,17 +100,19 @@ class Portafolio {
                 </a>`).join(" ");
 
         var tec = this.tec.map((e) => `<h5><span class='m-1 px-3 badge rounded-pill text-bg-secondary'>${e[0]}</span></h5>`).join(' ');
-
+        var btnCode = this.linkCode=="" ? "" : `<a class='btn btn-primary btn-sm' target='_blank' href='${this.linkCode}'><i class='fa fa-code'></i> ver codigo</a>`;
+        
         var data_caption = `
         <div class='col-md-5 m-auto'>
             <div class='description'>
                 <p class='text-desc'>${this.descripcion}</p>
             </div>
             <div class='tecno'>
-                <h3 class='modal-title fs-5'>Tecnologías Utilizadas:</h3>
-                <div class='d-flex justify-content-start'>
-                    ${tec}
-                </div>
+            <div class='d-flex justify-content-start'>
+                <h3 class='modal-title fs-5'>Tecnologías Utilizadas:_</h3>
+                ${tec}
+            </div>
+                ${btnCode}
             </div>
         </div>`;
 
@@ -157,6 +168,8 @@ portfolio.setTitle("GESTOR PACIENTES")
 
     .addTec("EXCEL","fa-solid fa-file-excel color-7")
 
+    // .setLinkCode("https://github.com/Dc988")
+    
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-2.jpg")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-1.jpg")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-3.jpg")
@@ -164,7 +177,24 @@ portfolio.setTitle("GESTOR PACIENTES")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-5.jpg")
     .addCarrusel("img/carouserl_proyectos/eme_excel/item-6.jpg")
     .push();
+
+//2. GESTOR NOTAS DE SENA
+portfolio.setTitle("GESTOR DE NOTAS SENA")
+    .setId("carousel_proyect_notas_sena")
+    .setFilter("PYTHON")
+    .setDescripcion("Proyecto desarrollado en la etapa de formacion del sena que me permitio gestionar las notas de cata evidencia recolectada, las funciones que posee son: almacenar información en una BBDD, interfaz de filtrado, formulario de ingreso y actualización la cual permite abrir carpetas y archivos, panel de configuración en la que se puede importar y exportar información de un archivo XLSX, asignar una ruta de carte en la que se almacenan evidencias, y una interfaz que permite establecer que columnas se visualizan en la tabla.")
+
+    .addTec("PYTHON","fa-brands fa-python color-6")
+
+    .setLinkCode("https://github.com/Dc988")
+    
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-4.jpg")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-1.jpg")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-2.jpg")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-3.jpg")
+    .addCarrusel("img/carouserl_proyectos/gestor_notas/item-5.jpg")
+    .push();
     
 // agregar btns de filtrado
 portfolio.setBtnFilter();
-new WOW().init();
+
