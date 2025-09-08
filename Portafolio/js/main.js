@@ -1,9 +1,16 @@
-
+import portfolio from "./ProyectData.js";
 
 document.addEventListener('DOMContentLoaded', function () {
+    
     // Filtrado de proyectos
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project-card');
+
+    // switch nicescroll
+    function changeScroll(panel_1, panel_2) {
+        $(panel_1).getNiceScroll().remove();
+        $(panel_2).niceScroll(sidebar_nicescroll_opts);
+    }
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -28,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-
     // Animación de entrada para elementos
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -50,9 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
+    // USO DE NICESCROLL
     let sidebar_nicescroll_opts = {
         horizrailenabled: false,
-        cursorcolor: "var(--color-5)",  // Rojo
+        cursorcolor: "var(--primary-color)",  
         cursorwidth: "5px",
         cursorborder: "none",
         background: "none",   // Fondo de la barra de scroll
@@ -61,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
         mousescrollstep: 40,     // Sensibilidad del scroll del mouse
     }
 
-    $(".project-modal").niceScroll(sidebar_nicescroll_opts);
+    $("body").niceScroll(sidebar_nicescroll_opts);
+   
     // Modal de proyecto
     const viewButtons = document.querySelectorAll('.view-project');
     const modal = document.getElementById('projectModal');
@@ -82,15 +89,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // EVENTO MOSTRAR MODEL
     viewButtons.forEach(button => {
         button.addEventListener('click', () => {
             const projectId = button.getAttribute('data-project');
+
             const data = portfolio.getData(projectId);
 
             // Construir contenido del modal
-            imgArray = data.images;
-            imgCaptions = data.captions;
-            imgs = "";
+            let imgArray = data.images;
+
+
+            let imgCaptions = data.captions;
+            let imgs = "";
 
             for (let index = 2; index < imgArray.length; index++) {
                 imgs += (`
@@ -111,32 +122,29 @@ document.addEventListener('DOMContentLoaded', function () {
                                 ${imgs}
                             </div>
                             
-                        </div>
-                        <h2 class="fs-2 fw-bold title text-white">${data.title}</h2>
-                        <p class="fw-semibold text-white-50">${data.category}</p>
-                        
-                        <div class="d-flex flex-wrap gap-2 mb-2">
-                            ${data.tech.map(tech => `<span class="project-tech">${tech}</span>`).join('')}
-                        </div>
-                        
-                        <p class="text-white">${data.description}</p>
-                        
-                        <h3 class="fs-5 fw-bold text-white">Características</h3>
-                        <ul class="row gap-2 mb-4">
-                            ${data.features.map(feature => `
-                                <li class=" col-12 col-md-10 d-flex align-items-center text-white-50">
-                                    <svg class="me-2 text-success" style="width: 15px; height: 15px;"  fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    ${feature}
-                                </li>
-                            `).join('')}
-                        </ul>
-                        <div class="gap-4 ${data.linkCode == "" ? "d-none" : ""}">
-                            <a href="${data.linkCode}" target="_blank" class="btn btn-outline-light py-2 px-4">
-                                Código Fuente
-                            </a>
-                        </div>
+                            <h2 class="fs-2 fw-bold title text-white">${data.title}</h2>
+                            <p class="fw-semibold text-white-50">${data.category}</p>
+                            
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                                ${data.tech.map(tech => `<span class="project-tech">${tech}</span>`).join('')}
+                            </div>
+                            
+                            <p class="text-white">${data.description}</p>
+                            
+                            <h3 class="fs-5 fw-bold text-white">Características</h3>
+                            <ul class="listCheck">
+                                ${data.features.map(feature => `
+                                    <li>
+                                        ${feature}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                            <div class="gap-4 ${data.linkCode == "" ? "d-none" : ""}">
+                                <a href="${data.linkCode}" target="_blank" class="btn btn-outline-light py-2 px-4">
+                                    Código Fuente
+                                </a>
+                            </div>
+                        <div>
                     `;
 
             modal.style.display = 'block';
@@ -144,7 +152,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     });
-
-    
 });
 

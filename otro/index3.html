@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Programming Languages</title>
+    <!-- Import TailwindCSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for hexagonal shapes and animations */
+        .hexagon {
+            width: 120px;
+            height: 104px; /* Adjusted for hexagon aspect ratio */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient for modern look */
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        /* Hover animation: slight rotation, scale, and shadow enhancement */
+        .hexagon:hover {
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            animation: pulse 1s infinite;
+        }
+
+        /* Keyframe for a subtle pulse effect on hover */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Subtle upward floating animation for all hexagons */
+        .hexagon-container {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Icon-like effects using CSS (text-based for logo avoidance) */
+        .icon-python::before { content: "🐍"; font-size: 1.5rem; } /* Descriptive text effect */
+        .icon-javascript::before { content: "{}"; font-size: 1.5rem; }
+        .icon-java::before { content: "☕"; font-size: 1.5rem; } /* Avoided direct logo, used symbolic text */
+        .icon-cpp::before { content: "++"; font-size: 1.5rem; }
+        .icon-react::before { content: "⚛️"; font-size: 1.5rem; } /* Symbolic for ecosystem */
+        .icon-html::before { content: "<>"; font-size: 1.5rem; }
+        .icon-css::before { content: "{ }"; font-size: 1.5rem; }
+        .icon-node::before { content: "≻"; font-size: 1.5rem; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hexagon {
+                width: 80px;
+                height: 69px;
+                font-size: 0.8rem;
+            }
+            .hexagon::before {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen flex flex-col items-center justify-center p-8">
+    <h1 class="text-4xl font-bold text-white mb-8 text-center animate-bounce">My Programming Languages</h1>
+    <p class="text-gray-300 text-center mb-12 max-w-2xl">
+        Explore the languages and tools I master, presented in a dynamic hexagonal grid with smooth animations. Each tile represents a key skill in my development arsenal.
+    </p>
+    
+    <!-- Grid container for hexagons, responsive and centered -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-5xl">
+        <!-- Python Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('Python: Used for data science and automation!')">
+                <div>
+                    <div class="icon-python"></div>
+                    <div>Python</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('JavaScript: Powers interactive web experiences!')">
+                <div>
+                    <div class="icon-javascript"></div>
+                    <div>JavaScript</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Java Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('Java: Ideal for enterprise applications and Android development!')">
+                <div>
+                    <div class="icon-java"></div>
+                    <div>Java</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- C++ Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('C++: Excels in performance-critical systems and game development!')">
+                <div>
+                    <div class="icon-cpp"></div>
+                    <div>C++</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- React Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('React: Builds fast, reusable user interfaces!')">
+                <div>
+                    <div class="icon-react"></div>
+                    <div>React</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('HTML: The backbone of web structure!')">
+                <div>
+                    <div class="icon-html"></div>
+                    <div>HTML</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('CSS: Styles and animates beautiful websites!')">
+                <div>
+                    <div class="icon-css"></div>
+                    <div>CSS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Node.js Hexagon -->
+        <div class="hexagon-container">
+            <div class="hexagon" onclick="alert('Node.js: Enables server-side JavaScript for scalable apps!')">
+                <div>
+                    <div class="icon-node"></div>
+                    <div>Node.js</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for additional interactivity: click alerts and optional sound/visual feedback
+        // Note: Since no audio is required, we'll stick to alerts and a gentle expand effect
+        document.querySelectorAll('.hexagon').forEach(hex => {
+            hex.addEventListener('click', function() {
+                // Sample alert; customize with more details if needed
+                console.log('Language clicked:', this.innerText);
+            });
+        });
+
+        // Optional: Auto-rotate all hexagons slightly every few seconds for added dynamism
+        setInterval(() => {
+            document.querySelectorAll('.hexagon').forEach(hex => {
+                hex.style.transform = hex.style.transform === 'rotate(5deg)' ? 'rotate(-5deg)' : 'rotate(5deg)';
+                setTimeout(() => {
+                    hex.style.transform = '';
+                }, 500);
+            });
+        }, 5000);
+    </script>
+</body>
+</html>
+</content>
+</create_file>

@@ -179,76 +179,74 @@ class Portafolio {
         this.clear();
     }
 }
+
 //PORTAFOLIO
 const portfolio = new Portafolio();
-document.addEventListener('DOMContentLoaded', function () {
 
-    // CONTACT INFO
-    // GITHUB
-    addContactInfo("Github", "https://github.com/Dc988", "fa-brands fa-github", "btn-danger")
-    // LINKIN
-    addContactInfo("Linkedin", "https://www.linkedin.com/in/dicmar-andres-castro-dominguez-5a991930b", "fa-brands fa-linkedin-in", "btn-primary")
-    // WHATSAPP
-    addContactInfo("Whatsapp", "https://wa.me/573043821671", "fa-brands fa-whatsapp", "btn-success")
+// CONTACT INFO
+// GITHUB
+addContactInfo("Github", "https://github.com/Dc988", "fa-brands fa-github", "btn-danger")
+// LINKIN
+addContactInfo("Linkedin", "https://www.linkedin.com/in/dicmar-andres-castro-dominguez-5a991930b", "fa-brands fa-linkedin-in", "btn-primary")
+// WHATSAPP
+addContactInfo("Whatsapp", "https://wa.me/573043821671", "fa-brands fa-whatsapp", "btn-success")
 
-    //HABILIDADES
-    addSkill("HTML", "fa-brands fa-html5", "intermedio");
-    addSkill("CSS", "fa-brands fa-css3-alt", "intermedio");
-    addSkill("JAVASCRIPT", "fa-brands fa-js", "intermedio");
-    addSkill("BOOTSTRAP", "fa-brands fa-bootstrap", "intermedio");
-    addSkill("PHP", "fa-brands fa-php", "intermedio");
-    addSkill("PYTHON", "fa-brands fa-python", "intermedio");
-    addSkill("EXCEL VBA", "fa-solid fa-file-excel", "intermedio");
-    addSkill("REACT", "fa-brands fa-react learning", "aprendiendo");
+//HABILIDADES
+addSkill("HTML", "fa-brands fa-html5", "intermedio");
+addSkill("CSS", "fa-brands fa-css3-alt", "intermedio");
+addSkill("JAVASCRIPT", "fa-brands fa-js", "intermedio");
+addSkill("BOOTSTRAP", "fa-brands fa-bootstrap", "intermedio");
+addSkill("PHP", "fa-brands fa-php", "intermedio");
+addSkill("PYTHON", "fa-brands fa-python", "intermedio");
+addSkill("EXCEL VBA", "fa-solid fa-file-excel", "intermedio");
+addSkill("REACT", "fa-brands fa-react learning", "aprendiendo");
 
-    
-    
+//2. GESTOR NOTAS DE SENA
+portfolio.setTitle("GESTOR DE NOTAS SENA")
+    .setId("carousel_proyect_notas_sena")
+    .setFilter("Python")
+    .setDescripcion("Proyecto desarrollado en la etapa de formación del sena que me permitió gestionar las notas de cada evidencia")
 
-    //2. GESTOR NOTAS DE SENA
-    portfolio.setTitle("GESTOR DE NOTAS SENA")
-        .setId("carousel_proyect_notas_sena")
-        .setFilter("Python")
-        .setDescripcion("Proyecto desarrollado en la etapa de formación del sena que me permitió gestionar las notas de cada evidencia")
+    .addModule("Almacenar información en una BBDD.")
+    .addModule("Interfaz de filtrado.")
+    .addModule("Formulario de ingreso y actualización la cual permite abrir carpetas y archivos.")
+    .addModule("Panel de configuración en la que se puede importar y exportar información de un archivo XLSX.")
+    .addModule("Asignar una ruta de carte en la que se almacenan evidencias.")
+    .addModule("Interfaz que permite establecer que columnas se visualizan en la tabla.")
 
-        .addModule("Almacenar información en una BBDD.")
-        .addModule("Interfaz de filtrado.")
-        .addModule("Formulario de ingreso y actualización la cual permite abrir carpetas y archivos.")
-        .addModule("Panel de configuración en la que se puede importar y exportar información de un archivo XLSX.")
-        .addModule("Asignar una ruta de carte en la que se almacenan evidencias.")
-        .addModule("Interfaz que permite establecer que columnas se visualizan en la tabla.")
+    .addTec("Python")
+    .setYear("2025")
+    .setLinkCode("https://github.com/Dc988/Gestion_Notas.git")
 
-        .addTec("Python")
-        .setYear("2025")
-        .setLinkCode("https://github.com/Dc988/Gestion_Notas.git")
-
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-0.jpg", "")
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-1.jpg", "Interfaz Principal")
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-2.jpg", "Panel de Configuraciones")
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-3.jpg", "Interfaz para seleccionar columnas visibles en el table")
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-4.jpg", "Formulario de gestión de notas")
-        .addCarrusel("img/carouserl_proyectos/gestor_notas/item-5.jpg", "Interfaz de filtrado")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-0.jpg", "")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-1.jpg", "Interfaz Principal")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-2.jpg", "Panel de Configuraciones")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-3.jpg", "Interfaz para seleccionar columnas visibles en el table")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-4.jpg", "Formulario de gestión de notas")
+    .addCarrusel("./img/carouserl_proyectos/gestor_notas/item-5.jpg", "Interfaz de filtrado")
     .push();
 
-    portfolio.setTitle("Sistema de Captura de Información Médica")
-        .setId("carousel_proyect_202")
-        .setFilter("Excel")
-        .setDescripcion("Este archivo de Excel VBA es un innovador formulario diseñado para la captura eficiente de información médica de pacientes, el cual permite optimizar la gestión de datos médicos, mejorando la atención y el seguimiento de los pacientes.")
+portfolio.setTitle("Sistema de Captura de Información Médica")
+    .setId("carousel_proyect_202")
+    .setFilter("Excel")
+    .setDescripcion("Este archivo de Excel VBA es un innovador formulario diseñado para la captura eficiente de información médica de pacientes, el cual permite optimizar la gestión de datos médicos, mejorando la atención y el seguimiento de los pacientes.")
 
-        .addModule("Clasifica a los pacientes en diversos programas de salud según su edad y sexo, alineándose con la Resolución 202.")
-        .addModule("Busca información en base al id del paciente")
-        .addModule("Panel de configuraciones que permite modificar informaciones predeterminadas")
-        .addModule("Exportar la informacón en archivo XLSX")
+    .addModule("Clasifica a los pacientes en diversos programas de salud según su edad y sexo, alineándose con la Resolución 202.")
+    .addModule("Busca información en base al id del paciente")
+    .addModule("Panel de configuraciones que permite modificar informaciones predeterminadas")
+    .addModule("Exportar la informacón en archivo XLSX")
 
-        .addTec("Excel")
-        .setYear("2025")
-        .setLinkCode("")
-        .addCarrusel("img/carouserl_proyectos/Resolución 202/item-0.jpg", "")
-        .addCarrusel("img/carouserl_proyectos/Resolución 202/item-1.PNG", "Interfaz Principal")
-        .addCarrusel("img/carouserl_proyectos/Resolución 202/item-4.PNG", "Panel de Configuraciones")
-        .addCarrusel("img/carouserl_proyectos/Resolución 202/item-2.PNG", "Panel de Configuraciones, apartado para editar información de los combobox")
-        .addCarrusel("img/carouserl_proyectos/Resolución 202/item-3.PNG", "Interfaz para diligenciar información de los programas hospitalarios.")
+    .addTec("Excel")
+    .setYear("2025")
+    .setLinkCode("")
+    .addCarrusel("./img/carouserl_proyectos/Resolucion_202/item-0.jpg", "")
+    .addCarrusel("./img/carouserl_proyectos/Resolucion_202/item-1.PNG", "Interfaz Principal")
+    .addCarrusel("./img/carouserl_proyectos/Resolucion_202/item-4.PNG", "Panel de Configuraciones")
+    .addCarrusel("./img/carouserl_proyectos/Resolucion_202/item-2.PNG", "Panel de Configuraciones, apartado para editar información de los combobox")
+    .addCarrusel("./img/carouserl_proyectos/Resolucion_202/item-3.PNG", "Interfaz para diligenciar información de los programas hospitalarios.")
     .push();
 
-    // agregar btns de filtrado
-    portfolio.setBtnFilter();
-});
+// agregar btns de filtrado
+portfolio.setBtnFilter();
+
+export default portfolio;

@@ -21,28 +21,29 @@
 
 <body>
 
-    <div class="img-banner"></div>
+    <!-- HEADER CONTAINER -->
+    <div class="img-banner">
+    </div>
+    <header class="header row">
+        <div class="img-user col-md-5 mx-3">
+        </div>
+        <div class="info-user">
+            <h2 class="user-name">Dicmar Castro Dominguez</h2>
+            <h5 class="user-profesion">Backend Developer</h5>
+            <h6 class="">Email: dicmarcastro988@gmail.com</h6>
+            <div class="data-contact mt-1" id="header_contact">
+                <a href="https://flowcv.com/resume/8ws6phs4sm" target="_blank" class="btn btn-dark">Mi CV <i
+                        class="fa-solid fa-download"></i></a>
+            </div>
+
+        </div>
+    </header>
     <main class="container">
-        <!-- HEADER CONTAINER -->
-        <header class="header row p-4 section">
-            <div class="img-user col-md-5">
-            </div>
-            <div class="info-user col-md-7 mt-3">
-                <h2 class="user-name">Dicmar Castro Dominguez</h2>
-                <h5 class="user-profesion">Backend Developer</h5>
-                <h6 class="">Email: dicmarcastro988@gmail.com</h6>
-                <div class="data-contact mt-3" id="header_contact">
-                    <a href="https://flowcv.com/resume/8ws6phs4sm" target="_blank" class="btn btn-dark">Mi CV <i
-                            class="fa-solid fa-download"></i></a>
-                </div>
-
-            </div>
-        </header>
-
         <!-- SECCION DE PROYECTOS -->
-        <section class="proyectos pb-4">
 
-            <h2 class="title"><i class="fa fa-code"></i> PROYECTOS</h2>
+        <section class="proyectos">
+
+            <h2 class="title"><i class="fa-solid fa-briefcase"></i> PROYECTOS</h2>
 
             <!-- Filtros -->
             <div class="d-flex flex-wrap justify-content-center gap-3 mb-4 fade-in" id="btn_filter">
@@ -50,12 +51,16 @@
                     <span class="category-dot bg-white"></span>Todos
                 </button>
 
+
             </div>
 
             <!-- Grid de Proyectos -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gap-3" id="projects_grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gap-3 p-1" id="projects_grid">
+
             </div>
         </section>
+
+        <!-- ABOUT ME -->
         <section>
             <h2 class="title"><i class="fa fa-user"></i> SOBRE MI</h2>
             <div class="description-about-me row">
@@ -73,14 +78,31 @@
                 <img class="col-md-5" src="img/img-about-me-section.png" alt="img set">
             </div>
         </section>
+
         <!-- SKILLS -->
-        <section class="pb-4">
+        <section class="">
 
             <h2 class="title"><i class="fa fa-code"></i> CONOCIMIENTOS TÉCNICOS</h2>
             <div class="skills" id="skill_content">
             </div>
 
         </section>
+
+        <!-- EXPERIENCIA LABORAL -->
+        <!-- <section>
+            <h2 class="title"><i class="fa-solid fa-building"></i> EXPERIENCIA LABORAL</h2>
+            <div class="experiencia" id="xp_content">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>¡El Viaje Recién Comienza!</h3>
+                    <p>Actualmente estoy enfocado en desarrollar mis habilidades en desarrollo web y construyendo proyectos personales increíbles. Cada línea de código es un paso más hacia mi primera oportunidad profesional.</p>
+                    <p>Estoy emocionado por las experiencias que vendrán y las oportunidades de crecimiento que se presenten en este maravilloso mundo del desarrollo web.</p>
+                    
+                </div>
+            </div>
+        </section> -->
     </main>
 
     <!-- Modal de Proyecto -->
@@ -134,10 +156,10 @@
     <!-- fanci box -->
     <script src="modules/fancybox/js/jquery.fancybox.min.js"></script>
 
-    <script src="js/ProyectData.js"></script>
+    <!-- <script src="js/ProyectData.js"></script> -->
 
     <!-- js principal -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 
 </body>
 
